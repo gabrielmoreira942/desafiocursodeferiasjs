@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora IMC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-5 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+              <h2 class="fw-bold mb-0">Calculadora IMC</h2>
+            </div>
+
+            <div class="modal-body p-5 pt-0">
+              <form class="">
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control rounded-4" id="altura" placeholder="name@example.com">
+                  <label for="altura">Informe a sua altura</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control rounded-4" id="peso" placeholder="Password">
+                  <label for="peso">Informe o seu peso</label>
+                </div>
+                <input class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="button" value="Calcular"
+                  onclick="Enviar();"></input>
+              </form>
+            </div>
+          </div>
+          <!-- altura e peso -->
+          <div id="alturaPeso" class="alert alert-danger mt-3" style="display: none;">
+            <strong>Aviso!</strong><br>
+            Você esqueceu de informar a sua altura e peso.
+          </div>
+          <div id="invalido" class="alert alert-danger mt-3" style="display: none;">
+            <strong>Aviso!</strong><br>
+              Altura ou peso inválida.
+          </div>
+          <!-- altura -->
+          <div id="alturaMsg" class="alert alert-danger mt-3" style="display: none;">
+            <strong>Aviso!</strong><br>
+            Você esqueceu de informar a sua altura
+          </div>
+          <!-- peso -->
+          <div id="pesoMsg" class="alert alert-danger mt-3" style="display: none;">
+            <strong>Aviso!</strong><br>
+            Você esqueceu de informar o seu peso
+          </div>
+          <!-- muito abaixo/grave -->
+          <div id="mGBlock" class="alert alert-danger mt-3" style="display: none;">
+            <strong>Cuidado!</strong><br>
+            O seu IMC é: <strong id="mGrave">abaixo de 16</strong>,<br>
+            Esse valor está muito abaixo e pode trazer riscos a sua saúde!
+          </div>
+          <!-- obesidade -->
+          <div id="mObBlock" class="alert alert-danger mt-3" style="display: none;">
+            <strong>Cuidado!</strong><br>
+            O seu IMC é: <strong id="mOb"></strong>,<br>
+            Esse valor indica obesidade e pode trazer riscos a sua saúde!
+          </div>
+          <!-- leve -->
+          <div id="mLBlock" class="alert alert-warning mt-3" style="display: none;">
+            <strong>Cuidado!</strong><br>
+            O seu IMC é: <strong id="mLeve"></strong>,<br>
+            Esse valor está muito baixo e pode trazer riscos a sua saúde!
+          </div>
+          <!-- sobrepeso -->
+          <div id="mSbpBlock" class="alert alert-warning mt-3" style="display: none;">
+            <strong>Cuidado!</strong><br>
+            O seu IMC é: <strong id="mSbp"></strong>,<br>
+            Esse valor está com sobrepeso e pode trazer riscos a sua saúde!
+          </div>
+          <!-- ok -->
+          <div id="mOKBlock" class="alert alert-success mt-3" style="display: none;">
+            <strong>Parabéns!</strong><br>
+            O seu IMC é: <strong id="mOK"></strong>,<br>
+            Esse valor está de acordo com o esperado, continue se cuidando!
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts.js">
+    
+  </script>
+
+</body>
+
+</html>
